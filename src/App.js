@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, {useEffect, useState} from "react";
 import BookForm from "./BookForm";
-import BookList from "./BookList";
 
 const App = () =>{
   const [books, setBooks] = useState([]);
@@ -64,7 +63,7 @@ const App = () =>{
       <BookForm addBook={addBook} setShowForm={setShowForm}/>}
       <button 
         onClick={()=>setShowForm(!showForm)}>toggle new form</button>
-      {BookList(books)}
+      {BookList()}
     </div>
   )
 }
